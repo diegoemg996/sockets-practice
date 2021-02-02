@@ -16,7 +16,7 @@ io.on('connection', (client) => {
     client.on('enviarMensaje', ({ usuario, mensaje }, callback) => {
         console.log(usuario + ' es ' + mensaje);
 
-        client.broadcast.emit('enviarMensaje', data);
+        client.broadcast.emit('enviarMensaje', usuario);
 
         /*         if (mensaje) {
                     callback({
